@@ -4,8 +4,8 @@ namespace EPiServer.Core
 {
     public class XhtmlString : HtmlString
     {
-        public XhtmlString(string value) : base(value)
-        {
-        }
+        public XhtmlString() : base(string.Empty) { }
+
+        public XhtmlString(string value) : base(value) { }
     }
 }

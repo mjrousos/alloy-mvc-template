@@ -16,7 +16,7 @@ namespace AlloyTemplates.Business.Initialization
     /// It's also possible to map a display mode as a channel through the DisplayChannelService.RegisterDisplayMode() method.
     /// Adding channels that way does not however enable specifying ResolutionId which we want to do for the mobile channel.
     /// </remarks>
-    [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
+    [ModuleDependency(typeof(InitializationModule))]
     public class DisplayModesInitialization : IInitializableModule
     {
         public void Initialize(InitializationEngine context)

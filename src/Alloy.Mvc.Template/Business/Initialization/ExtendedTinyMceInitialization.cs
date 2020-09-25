@@ -28,12 +28,12 @@ namespace AlloyTemplates.Business.Initialization
 
                 // This will clone the default settings object and extend it by
                 // limiting the block formats for the MainBody property of an ArticlePage.
-                config.For<ArticlePage>(t => t.MainBody)
+                config.For<ArticlePage>(t => t.MainBody as ArticlePage)
                     .BlockFormats("Paragraph=p;Header 1=h1;Header 2=h2;Header 3=h3");
 
                 // Passing a second argument to For<> will clone the given settings object
                 // instead of the default one and extend it with some basic toolbar commands.
-                config.For<EditorialBlock>(t => t.MainBody, config.Empty())
+                config.For<EditorialBlock>(t => t.MainBody as EditorialBlock, config.Empty())
                     .AddEpiserverSupport()
                     .DisableMenubar()
                     .Toolbar("bold italic underline strikethrough");

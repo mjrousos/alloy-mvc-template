@@ -1,5 +1,4 @@
-﻿using EPiServer.Editor;
-using EPiServer.Shell;
+﻿using EPiServer.Shell;
 using AlloyTemplates.Models.Pages;
 
 namespace AlloyTemplates.Business.UIDescriptors

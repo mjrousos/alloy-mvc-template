@@ -6,5 +6,7 @@ namespace EPiServer.DataAnnotations
     {
         public string GroupName { get; set; }
         public string GUID { get; set; }
+
+        public bool AvailableInEditMode { get; set; }
     }
 }

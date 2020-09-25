@@ -1,4 +1,8 @@
-﻿using System.Web;
+﻿#if NETFRAMEWORK
+using System.Web;
+#elif NETCOREAPP
+using Microsoft.AspNetCore.Html;
+#endif
 
 namespace EPiServer.Core
 {

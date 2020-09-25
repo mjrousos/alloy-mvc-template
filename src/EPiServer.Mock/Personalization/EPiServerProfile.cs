@@ -1,4 +1,5 @@
-﻿using System.Web.Profile;
+﻿#if NETFRAMEWORK
+using System.Web.Profile;
 
 namespace EPiServer.Personalization
 {
@@ -10,3 +11,4 @@ namespace EPiServer.Personalization
         public static EPiServerProfile Wrap(ProfileBase profile) => default;
     }
 }
+#endif

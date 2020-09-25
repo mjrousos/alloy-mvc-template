@@ -1,10 +1,9 @@
 ﻿using EPiServer.ServiceLocation;
 using System;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.Shell.ObjectEditing.EditorDescriptors
 {
-    public sealed class EditorDescriptorRegistrationAttribute : ServicePlugInAttributeBase, _Attribute, IServiceConfiguration
+    public sealed class EditorDescriptorRegistrationAttribute : ServicePlugInAttributeBase, IServiceConfiguration
     {
         public EditorDescriptorRegistrationAttribute() { }
 

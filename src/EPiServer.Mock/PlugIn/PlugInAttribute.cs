@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.PlugIn
 {
-    public abstract class PlugInAttribute : Attribute, _Attribute
+    public abstract class PlugInAttribute : Attribute
     {
         protected PlugInAttribute() { }
 

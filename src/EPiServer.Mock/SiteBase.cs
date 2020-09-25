@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if NETFRAMEWORK
+using System;
 using System.Web;
 
 namespace EPiServer
@@ -10,3 +11,4 @@ namespace EPiServer
         protected virtual bool SchemeHostPortMatch(Uri url1, Uri url2) => default;
     }
 }
+#endif

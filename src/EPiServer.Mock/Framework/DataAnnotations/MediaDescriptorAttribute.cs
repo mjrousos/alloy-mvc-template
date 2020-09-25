@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.Framework.DataAnnotations
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-    public sealed class MediaDescriptorAttribute : Attribute, _Attribute
+    public sealed class MediaDescriptorAttribute : Attribute
     {
         public MediaDescriptorAttribute() { }
 

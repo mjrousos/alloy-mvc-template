@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.DataAnnotations
 {
-    public class BackingTypeAttribute : Attribute, _Attribute
+    public class BackingTypeAttribute : Attribute
     {
         public Type BackingType { get; }
 

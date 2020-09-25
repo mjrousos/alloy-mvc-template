@@ -1,4 +1,5 @@
-﻿using EPiServer.Framework;
+﻿#if NETFRAMEWORK
+using EPiServer.Framework;
 using EPiServer.ServiceLocation;
 using System.Web;
 
@@ -16,3 +17,4 @@ namespace EPiServer.Web
         }
     }
 }
+#endif

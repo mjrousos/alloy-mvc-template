@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.ServiceLocation
 {
-    public sealed class ServiceConfigurationAttribute : Attribute, _Attribute, IServiceConfiguration
+    public sealed class ServiceConfigurationAttribute : Attribute, IServiceConfiguration
     {
         public ServiceConfigurationAttribute() { }
 

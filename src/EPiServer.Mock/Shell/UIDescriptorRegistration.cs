@@ -1,9 +1,8 @@
 ﻿using EPiServer.ServiceLocation;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.Shell
 {
-    public sealed class UIDescriptorRegistrationAttribute : ServicePlugInAttributeBase, _Attribute, IServiceConfiguration
+    public sealed class UIDescriptorRegistrationAttribute : ServicePlugInAttributeBase, IServiceConfiguration
     {
         public UIDescriptorRegistrationAttribute() { }
     }

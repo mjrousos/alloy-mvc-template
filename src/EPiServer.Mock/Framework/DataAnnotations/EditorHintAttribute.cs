@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace EPiServer.Framework.DataAnnotations
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    public sealed class EditorHintAttribute : Attribute, _Attribute
+    public sealed class EditorHintAttribute : Attribute
     {
         public EditorHintAttribute(string hint) { }
 

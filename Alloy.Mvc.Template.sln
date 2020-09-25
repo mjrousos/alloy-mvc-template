@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A1272902
 		build\Templates.targets = build\Templates.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPiServer.Mock", "src\EPiServer.Mock\EPiServer.Mock.csproj", "{A1B07537-655C-41A2-B1CF-03DAEE221C5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPiServer.Mock", "src\EPiServer.Mock\EPiServer.Mock.csproj", "{A1B07537-655C-41A2-B1CF-03DAEE221C5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +34,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3D79ADE5-DADB-47D2-933D-E98F9773AFAD} = {F856CAEC-B3F9-4320-B39D-E8F2EB8F6111}
+		{A1B07537-655C-41A2-B1CF-03DAEE221C5D} = {F856CAEC-B3F9-4320-B39D-E8F2EB8F6111}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CFCDD16-0AF4-44E0-953F-EDCA8012ABE6}

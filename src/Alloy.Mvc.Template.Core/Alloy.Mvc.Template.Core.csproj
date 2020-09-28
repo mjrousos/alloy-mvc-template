@@ -4,6 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>AlloyTemplates</RootNamespace>
     <AssemblyName>AlloyMvcTemplates</AssemblyName>
+    <AssemblyTitle>EPiServer CMS MVC Template package</AssemblyTitle>
+    <Company>EPiServer AB</Company>
+    <Copyright>© 2003-2017 by EPiServer AB. All rights reserved</Copyright>
+    <AssemblyVersion>1.2.0</AssemblyVersion>
+    <InformationalVersion>1.2.0-developerbuild</InformationalVersion>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
   </PropertyGroup>
 

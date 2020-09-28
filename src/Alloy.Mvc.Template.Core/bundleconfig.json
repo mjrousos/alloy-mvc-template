@@ -1,0 +1,23 @@
+[
+  {
+    "outputFileName": "wwwroot/dist/site.min.css",
+    "inputFiles": [
+        "Static/css/bootstrap.css",
+        "Static/css/bootstrap-responsive.css",
+        "Static/css/media.css",
+        "Static/css/style.css",
+        "Static/css/editmode.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/dist/site.min.js",
+    "inputFiles": [
+        "Static/js/*.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": true
+  }
+]

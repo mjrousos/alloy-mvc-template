@@ -1,7 +1,11 @@
 ﻿using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.ServiceLocation;
+#if NETFRAMEWORK
 using System.Web.Mvc;
+#elif NETCOREAPP
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#endif
 
 namespace EPiServer.Web.Mvc
 {

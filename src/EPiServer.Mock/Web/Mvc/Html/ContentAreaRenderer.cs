@@ -1,5 +1,9 @@
 ﻿using EPiServer.Core;
+#if NETFRAMEWORK
 using System.Web.Mvc;
+#elif NETCOREAPP
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#endif
 
 namespace EPiServer.Web.Mvc.Html
 {

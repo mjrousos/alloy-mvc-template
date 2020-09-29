@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AlloyTemplates;
+using AlloyTemplates.Business.Rendering;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
@@ -25,12 +29,20 @@ namespace Alloy.Mvc.Template.Core
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                options.ViewLocationFormats.Insert(0, TemplateCoordinator.PagePartialsFolder + "{0}.cshtml");
+                options.ViewLocationFormats.Insert(0, TemplateCoordinator.BlockFolder + "{0}.cshtml");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            HttpContextHelper.Initialize(app.ApplicationServices.GetRequiredService<IHttpContextAccessor>());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

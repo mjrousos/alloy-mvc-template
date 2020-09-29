@@ -36,8 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Compile Remove="Business\SearchService.cs" />
   </ItemGroup>
 
 </Project>

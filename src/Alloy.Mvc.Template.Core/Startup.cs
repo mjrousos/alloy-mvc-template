@@ -1,4 +1,6 @@
 ﻿using AlloyTemplates;
+using AlloyTemplates.Business;
+using AlloyTemplates.Business.Initialization;
 using AlloyTemplates.Business.Rendering;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +16,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using static AlloyTemplates.AdministratorRegistrationPage;
 
 namespace Alloy.Mvc.Template.Core
 {
@@ -30,12 +33,17 @@ namespace Alloy.Mvc.Template.Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options => {
+                options.Filters.Add<PageContextActionFilter>();
+                // options.Filters.Add<RegistrationActionFilterAttribute>();
+            });
             services.Configure<RazorViewEngineOptions>(options =>
             {
                 options.ViewLocationFormats.Insert(0, TemplateCoordinator.PagePartialsFolder + "{0}.cshtml");
                 options.ViewLocationFormats.Insert(0, TemplateCoordinator.BlockFolder + "{0}.cshtml");
             });
+
+            DependencyResolverInitialization.ConfigureContainer(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
